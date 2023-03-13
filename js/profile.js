@@ -1,7 +1,6 @@
 $(document).ready(function() {
 	// get the current user's username from local storage
 	var session_key = localStorage.getItem('session_key');
-	alert(session_key);
 	// populate the username field in the form
 	//$('#username').val(username);
 
@@ -23,8 +22,6 @@ $(document).ready(function() {
 				localStorage.removeItem('session_key');
 				window.location.href = './login.html';
 			}
-			//alert(data.session_key);
-			//alert(data.message);
 		},
 		error: function() {
 			alert('Failed to get user profile data.');
@@ -34,7 +31,6 @@ $(document).ready(function() {
 	// handle form submission
 	$('#profile-form').submit(function(event) {
 		event.preventDefault();
-		alert("hi");
 		var session_key = localStorage.getItem('session_key');
 		// get the form data
 		var age = $('#age').val();
@@ -54,8 +50,6 @@ $(document).ready(function() {
 				contactAddress: contactAddress
 			},
 			success: function(data) {
-
-				alert(data.message);
 				alert('Profile updated successfully.');
 			},
 			error: function() {

@@ -9,7 +9,7 @@ $redis->connect(REDIS_HOST, 6379);
 // $client = new MongoClient();
 //$client = new MongoDB\Client('mongodb://127.0.0.1:27017');
 //$mdb = $cli->webappdb;
-$collection = 'mydb.people';
+$collection = MONGODB_NAME;
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
   // Handle GET request
